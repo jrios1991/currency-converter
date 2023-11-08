@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import Image from "next/image";
 import NewPrice from "@/app/components/NewPrice";
 
-export async function loadProduct(productId: number) {
+async function loadProduct(productId: number) {
   const res = await fetch(`https://fakestoreapi.com/products/${productId}`);
   const data = await res.json();
   return data;
