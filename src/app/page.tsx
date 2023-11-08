@@ -4,13 +4,13 @@ import { Suspense } from "react";
 import { ReduxProvider } from "@/redux/features/provider";
 import Convert from "./components/CurrencyConverter";
 
-export async function loadProducts() {
+async function loadProducts() {
   const res = await fetch("https://fakestoreapi.com/products?limit=10");
   const data = await res.json();
   return data;
 }
 export default async function Home() {
-  const products: any = await loadProducts();
+  const products = await loadProducts();
   return (
     <Suspense>
       <ReduxProvider>
