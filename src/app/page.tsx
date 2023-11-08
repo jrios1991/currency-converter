@@ -10,7 +10,7 @@ export async function loadProducts() {
   return data;
 }
 export default async function Home() {
-  const products = await loadProducts();
+  const products: any = await loadProducts();
   return (
     <Suspense>
       <ReduxProvider>
