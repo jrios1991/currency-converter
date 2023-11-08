@@ -1,0 +1,2 @@
+please make sure you run npm i if downloaded from github otherwise should in rhd folder "npm run dev"
+have included an API key for this project in .env.local please do not exceed 10,000 calls since that is the limit on this API
